@@ -1,0 +1,86 @@
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+color: #333333;
+margin: 0;
+padding: 0;
+}
+
+header {
+background-color: #222222;
+color: white;
+text-align: center;
+padding: 30px;
+}
+
+header h1 {
+margin-bottom: 10px;
+}
+
+main {
+width: 80%;
+margin: auto;
+padding: 20px;
+}
+
+section {
+margin-bottom: 40px;
+}
+
+article {
+background-color: white;
+padding: 20px;
+margin-top: 20px;
+}
+
+article h3 {
+color: #ff7a59;
+}
+
+article a {
+margin-top: 10px;
+background-color: #1DB954;
+color: white;
+text-decoration: none;
+padding: 10px 15px;
+}
+
+h2 {
+color: #ff7a59;
+padding-bottom: 5px;
+}
+
+hr {
+border: none;
+height: 2px;
+background-color: #dddddd;
+}
+
+#about-me {
+background-color: white;
+padding: 20px;
+border-radius: 10px;
+}
+
+footer {
+background-color: #222222;
+color: white;
+text-align: center;
+padding: 30px;
+}
+
+input[type="text"] {
+width: 250px;
+padding: 10px;
+border: 1px solid #cccccc;
+border-radius: 5px;
+}
+
+input[type="submit"] {
+background-color: #ff7a59;
+color: white;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+}
