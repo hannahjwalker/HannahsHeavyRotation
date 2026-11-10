@@ -1,10 +1,17 @@
+
 /* Custom styles build on Bootstrap 5.3.8 while keeping the Project 2 color palette. */
+
 :root {
   --charcoal: #222222;
   --coral: #ff7a59;
   --spotify-green: #1db954;
   --page-gray: #f4f4f4;
   --body-text: #333333;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
 }
 
 body {
@@ -14,6 +21,8 @@ body {
   line-height: 1.65;
 }
 
+
+
 .site-header,
 .site-footer {
   background-color: var(--charcoal);
@@ -22,21 +31,42 @@ body {
 
 .site-header .lead {
   color: #eeeeee;
+  max-width: 650px;
+  margin-inline: auto;
 }
+
+
 
 .site-nav {
   background-color: #303030;
   border-top: 3px solid var(--coral);
 }
 
+.site-nav .navbar-brand {
+  color: var(--coral);
+  letter-spacing: 0.08em;
+}
+
 .site-nav .nav-link {
   color: #ffffff;
+  padding: 0.65rem 1rem;
+  transition: color 0.2s ease;
 }
 
 .site-nav .nav-link:hover,
 .site-nav .nav-link:focus {
   color: var(--coral);
 }
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(255, 122, 89, 0.4);
+}
+
+
 
 .eyebrow {
   color: var(--coral);
@@ -51,6 +81,12 @@ body {
   color: var(--coral);
 }
 
+.section-title {
+  font-weight: 700;
+}
+
+
+
 .album-card,
 .release-card,
 .about-panel,
@@ -63,6 +99,15 @@ body {
 .album-card,
 .release-card {
   background-color: #ffffff;
+}
+
+.album-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.album-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1.25rem rgba(34, 34, 34, 0.13);
 }
 
 .album-card .card-body,
@@ -86,10 +131,12 @@ body {
   color: #333333;
 }
 
+
 .spotify-button {
   background-color: var(--spotify-green);
   border-color: var(--spotify-green);
   color: #ffffff;
+  transition: background-color 0.2s ease;
 }
 
 .spotify-button:hover,
@@ -99,6 +146,7 @@ body {
   color: #ffffff;
 }
 
+
 .about-panel,
 .subscribe-panel {
   background-color: #ffffff;
@@ -106,9 +154,10 @@ body {
 }
 
 .subscribe-button {
-  background-color: var(--coral);
-  border-color: var(--coral);
+  background-color: #fb9792;
+  border-color: #fb9792;
   color: #ffffff;
+  transition: background-color 0.2s ease;
 }
 
 .subscribe-button:hover,
@@ -118,17 +167,78 @@ body {
   color: #ffffff;
 }
 
+.form-control {
+  min-height: 44px;
+}
+
+.form-control:focus {
+  border-color:#fb9792;
+  box-shadow: 0 0 0 0.2rem rgba(255, 122, 89, 0.2);
+}
+
 .form-note {
   color: #666666;
 }
 
+
+@media (max-width: 991.98px) {
+  .site-header .container {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .site-nav .nav-link {
+    padding: 0.6rem 0;
+  }
+}
+
+
+
 @media (max-width: 575.98px) {
+  main.container {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+
   .site-header .display-4 {
     font-size: 2.25rem;
+  }
+
+  .site-header .lead {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
   }
 
   .about-panel,
   .subscribe-panel {
     padding: 1.5rem;
+  }
+
+  .album-card .card-body,
+  .release-card {
+    padding: 1.25rem;
+  }
+
+  .spotify-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
