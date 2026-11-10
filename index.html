@@ -1,76 +1,130 @@
 <!doctype html>
-
 <html lang="en">
-
 <head>
-	<title>Hannah's Heavy Rotations</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hannah's Heavy Rotation explores favorite albums and new releases.">
+  <title>Hannah's Heavy Rotation</title>
+  <!-- AI use: ChatGPT helped plan the Bootstrap 5.3.8 layout, and revise HTML/CSS structure. The site content and design is my Project 2 work. -->
+  <link rel="stylesheet" href="bootstrap-5.3.8-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<header>
-	<h1>Hannah's Heavy Rotation</h1>
-	<p> Exploring my favorite albums, new releases, and all things music</p>
+<body>
+  <header class="site-header">
+    <div class="container py-5 text-center">
+      <p class="eyebrow mb-2">THE MUSIC BLOG</p>
+      <h1 class="display-4 fw-bold mb-2">Hannah's Heavy Rotation</h1>
+      <p class="lead mb-0">Exploring my favorite albums, new releases, and all things music.</p>
+    </div>
+  </header>
 
-
-	<nav>
-    <ul>
-      <li><a href="#favorite-albums">Favorite Albums</a></li>
-      <li><a href="#new-releases">New Releases</a></li>
-      <li><a href="#about-me">About Me</a></li>
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-dark site-nav" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#top">HHR</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavigation" aria-controls="mainNavigation" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavigation">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#favorite-albums">Favorite Albums</a></li>
+          <li class="nav-item"><a class="nav-link" href="#new-releases">New Releases</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about-me">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="#subscribe">Subscribe</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
-</header>
 
-<main>
+  <main id="top" class="container py-5">
+    <section id="favorite-albums" class="content-section mb-5" aria-labelledby="favorite-heading">
+      <div class="section-heading mb-4">
+        <p class="eyebrow mb-1">ON REPEAT</p>
+        <h2 id="favorite-heading" class="section-title">My Favorite Albums</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <article class="card album-card h-100">
+            <div class="card-body d-flex flex-column">
+              <span class="badge genre-badge align-self-start mb-3">INDIE ROCK</span>
+              <h3 class="card-title h4">Sunburn <span class="artist-name"> -Dominic Fike</span></h3>
+              <p class="album-meta"><strong>Release year:</strong> 2023</p>
+              <p class="card-text">This album has been in my top rotation for years. The production is rich, the lyrics are deeply personal, and every track feels intentional from start to finish.</p>
+              <a class="btn spotify-button mt-auto align-self-start" href="https://open.spotify.com/album/2T7LuxZRr6SQMgABLtoYTH" target="_blank" rel="noopener noreferrer">Listen on Spotify <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+        <div class="col-12 col-md-6">
+          <article class="card album-card h-100">
+            <div class="card-body d-flex flex-column">
+              <span class="badge genre-badge align-self-start mb-3">ELECTRONIC / DANCE</span>
+              <h3 class="card-title h4">Deadbeat <span class="artist-name">— Tame Impala</span></h3>
+              <p class="album-meta"><strong>Release year:</strong> 2025</p>
+              <p class="card-text">A masterclass in atmospheric sound design. Perfect for late-night listening sessions, featuring lush synths and incredible rhythm changes.</p>
+              <a class="btn spotify-button mt-auto align-self-start" href="https://open.spotify.com/album/5WulAOx9ilWy1h8UGZ1gkI" target="_blank" rel="noopener noreferrer">Listen on Spotify <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-	<section id="favorite-albums">
-		<h2>My Favorite Albums</h2>
+    <section id="new-releases" class="content-section mb-5" aria-labelledby="releases-heading">
+      <div class="section-heading mb-4">
+        <p class="eyebrow mb-1">FRESH FINDS</p>
+        <h2 id="releases-heading" class="section-title">New Releases and First Listens</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-12 col-md-6">
+          <article class="release-card h-100">
+            <span class="badge release-badge mb-2">THIS WEEK</span>
+            <h3 class="h5">Small Town <span class="artist-name">-Dominic Fike</span></h3>
+            <p class="mb-0">A bold new direction for the artist. The lead single blends heavy basslines with soaring vocals, setting high expectations for their upcoming LP.</p>
+          </article>
+        </div>
+        <div class="col-12 col-md-6">
+          <article class="release-card h-100">
+            <span class="badge release-badge mb-2">THIS MONTH</span>
+            <h3 class="h5">Wallflower <span class="artist-name"> -Dominic Fike</span></h3>
+            <p class="mb-0">On first listen, this track stands out for its raw energy and live-recorded feel.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-		<article>
-			<h3>Dominic Fike- Sunburn</h3>
-			<p><strong>Genre:</strong> Indie Rock | <strong>Release Year:</strong> 2023</p>
-			<p>This album has been in my top rotation for years. The production is rich, the lyrics are deeply personal, and every track feels intentional from start to finish.</p>
-		<a href="https://open.spotify.com/album/2T7LuxZRr6SQMgABLtoYTH">Listen on Spotify &rarr;</a>
-		</article>
-		<article>
-     		 <h3>Deadbeat – Tame Impala</h3>
-     		 <p><strong>Genre:</strong> Electronic / Dance | <strong>Release Year:</strong> 2025</p>
-      		<p>A masterclass in atmospheric sound design. Perfect for late-night listening sessions, featuring lush synths and incredible rhythm changes.</p>
-    	<a href="https://open.spotify.com/album/5WulAOx9ilWy1h8UGZ1gkI">Listen on Spotify &rarr;</a>
-    	</article>
-  </section>
-<hr>
+    <section id="about-me" class="about-panel mb-5" aria-labelledby="about-heading">
+      <div class="row align-items-center g-3">
+        <div class="col-12 col-lg-3">
+          <p class="eyebrow mb-1">BEHIND THE PLAYLIST</p>
+          <h2 id="about-heading" class="section-title mb-0">About Me</h2>
+        </div>
+        <div class="col-12 col-lg-9">
+          <p class="mb-0">Welcome to my corner of the web! I started this blog to document my musical journey, share deep-dive album thoughts, and track new music discoveries as they drop. When I'm not listening to vinyl or digging through release Friday playlists, I'm building simple web projects like this one!</p>
+        </div>
+      </div>
+    </section>
 
-	<section id="new-releases">
-	<h2>New Releases and First Listens</h2>
+    <section id="subscribe" class="subscribe-panel text-center" aria-labelledby="subscribe-heading">
+      <p class="eyebrow mb-1">STAY IN THE LOOP</p>
+      <h2 id="subscribe-heading" class="section-title">Stay in the rotation!</h2>
+      <p class="mb-4">Subscribe to receive bi-weekly updates.</p>
+      <form class="row g-2 justify-content-center" action="#subscribe" method="get">
+        <div class="col-12 col-sm-7 col-md-6">
+          <label class="visually-hidden" for="email-address">Email address</label>
+          <input class="form-control" type="email" id="email-address" name="email" placeholder="you@example.com" autocomplete="email" required>
+        </div>
+        <div class="col-12 col-sm-auto">
+          <button class="btn subscribe-button w-100" type="submit">Subscribe</button>
+        </div>
+      </form>
+    </section>
+  </main>
 
-	<article>
-		<h3>Small Town- Dominic Fike</h3>
-		<p><strong>Released:</strong> This Week</p>
-		<p>A bold new direction for the artist. The lead single blends heavy basslines with soaring vocals, setting high expectations for their upcoming LP. </p>
-	</article>
+  <footer class="site-footer text-center py-4">
+    <div class="container">
+      <p class="mb-1">Thanks for stopping by!</p>
+      <p class="small mb-0">Hannah's Heavy Rotation</p>
+    </div>
+  </footer>
 
-	<article>
-		<h3>Wallflower- Dominic Fike</h3>
-		<p><strong>Released:</strong> This month</p>
-		<p>On first listen, this track stands out for its raw energy and live-recorded feel.</p>
-	</article>
-	</section>
-	<hr>
-
-	<section id="about-me">
-		<h2>About Me</h2>	
-		<p>Welcome to my corner of the web! I started this blog to document my musical journey, share deep-dive album thoughts, and track new music discoveries as they drop. When I'm not listening to vinyl or digging through release Friday playlists, I'm building simple web projects like this one!</p>
-	</section>
-</main>
-
-<footer>
-	<p> Thanks for stopping by!</p>
-
-<h2>Subscribe to recieve bi-weekly updates!</h2>
-
-<form action="/action_page.php">
-  <label for="fname">Email:</label><br>
-  <input type="text" id="fname" name="fname"><br><br>
-  <input type="submit" value="Submit">
-</form>
-</footer>
+  <script src="bootstrap-5.3.8-dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
